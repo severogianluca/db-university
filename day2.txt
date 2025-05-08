@@ -1,5 +1,7 @@
 1. Contare quanti iscritti ci sono stati ogni anno
-
+SELECT count(id) as numero_iscritti, year(enrolment_date) as anno_iscrizione
+from students
+group by year(enrolment_date)
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
