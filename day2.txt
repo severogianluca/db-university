@@ -1,0 +1,19 @@
+1. Contare quanti iscritti ci sono stati ogni anno
+
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+select office_address, count(*) as insegnanti
+from teachers
+group by office_address
+having count(*) > 1
+order by insegnanti desc
+
+3. Calcolare la media dei voti di ogni appello d'esame
+
+SELECT YEAR, AVG(cfu) AS media_voto
+FROM courses
+GROUP BY year
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
